@@ -4,9 +4,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var routes = require('./app_server/routes/index');
+require('./app_server/models/db');
 
+var routes = require('./app_server/routes/index');
 var app = express();
+
+app.set('port', process.env.PORT || 8080);
 
 // view engine setup
 app.set('views', path.join(__dirname,'app_server','views'));
