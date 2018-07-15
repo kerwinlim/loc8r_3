@@ -105,7 +105,7 @@ module.exports.locationsReadOne = function(req, res) {
     }
 };
 
-/* POST a new location */
+/* POST a new loc ation */
 /* /api/locations */
 module.exports.locationsCreate = function(req, res) {
     console.log(req.body);
